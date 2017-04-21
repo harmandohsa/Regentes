@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://186.151.231.167/wsconap/WebConap.asmx?wsdl" docRef="http://186.151.231.167/wsconap/WebConap.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://186.151.231.167/wsconap/WebConap.asmx" xmlns:q1="http://inab.gob.gt/" binding="q1:WebConapSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://186.151.231.167/wsconap/WebConap.asmx" xmlns:q2="http://inab.gob.gt/" binding="q2:WebConapSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

@@ -1,0 +1,107 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Regentes.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title>Consejo Nacional de Areas Protegidas - Modulo de Regentes</title>    
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+ <form id="Form1" runat="server">
+    <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
+    </telerik:RadScriptManager>
+    <div class="page">
+        <div class="header2">
+            <div >
+              <table>
+                <tr>
+                    
+                    <td>
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/Imagenes/Header.gif" 
+                            Width="1065px"/>
+                    </td>
+                </tr>
+              </table>
+            </div>
+            <div >
+                <table>
+                    <tr>
+                        <td>
+                            <telerik:RadMenu ID="Menu" Runat="server">
+                                <Items>
+                                <telerik:RadMenuItem  runat="server" Text="Ventanilla única (Gestión de Solicitudes)" Visible="false">
+                                        <Items>
+                                            <telerik:RadMenuItem runat="server" Text="Recepción de Expedientes" NavigateUrl="RecibeSecretaria.aspx"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="Historial de Expedientes" NavigateUrl="HistorialSecre.aspx"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="Expedientes Finalizados" NavigateUrl="ExpFinal.aspx?llamada=1"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="Solicitudes Incompletas" NavigateUrl="ExpIncompletos.aspx"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="Reporte de Recibos de Ingresos Varios" NavigateUrl="RepRecibos.aspx"></telerik:RadMenuItem>
+                                        </Items>
+                                </telerik:RadMenuItem>
+                                <telerik:RadMenuItem  runat="server" Text="Gestión de Solicitudes Técnico Forestal" Visible="false">
+                                        <Items>
+                                            <telerik:RadMenuItem runat="server" Text="Solicitud de Enmiendas" NavigateUrl="EnmiendasTec.aspx"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="Dictamen Técnico" NavigateUrl="RecibeTecnico.aspx"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="Historial de Expedientes" NavigateUrl="HistorialTecnico.aspx"></telerik:RadMenuItem>
+                                        </Items>
+                                </telerik:RadMenuItem>
+                                <telerik:RadMenuItem  runat="server" Text=" Gestión de Solicitudes Director Regional" Visible="false">
+                                    <Items>
+                                        <telerik:RadMenuItem runat="server" Text="Visto Bueno Dictamen Técnico" NavigateUrl="VistoBuenoTec.aspx"></telerik:RadMenuItem>
+                                        <telerik:RadMenuItem runat="server" Text="Visto Bueno Dictamen Legal/Resolución" NavigateUrl="VistoBuenoJur.aspx"></telerik:RadMenuItem>
+                                        <telerik:RadMenuItem runat="server" Text="Historial de Expedientes" NavigateUrl="HistorialDirector.aspx"></telerik:RadMenuItem>
+                                        <telerik:RadMenuItem runat="server" Text="Activar/Desactivar Regentes" NavigateUrl="ActDesRegente.aspx"></telerik:RadMenuItem>
+                                    </Items>
+                                </telerik:RadMenuItem>
+                                 <telerik:RadMenuItem  runat="server" Text="Gestión de Solicitudes Asesor Jurídico" Visible="false">
+                                    <Items>
+                                        <telerik:RadMenuItem runat="server" Text="Dictamen Legal/Resolución" NavigateUrl="VerJuridico.aspx"></telerik:RadMenuItem>
+                                        <telerik:RadMenuItem runat="server" Text="Historial de Expedientes" NavigateUrl="HistorialJuridico.aspx"></telerik:RadMenuItem>
+                                        <telerik:RadMenuItem runat="server" Text="Solicitud de Enmiendas" NavigateUrl="EnmiendaJur.aspx"></telerik:RadMenuItem>
+                                    </Items>
+                                </telerik:RadMenuItem>
+                                    <telerik:RadMenuItem  runat="server" Text="Administración" Visible="false">
+                                        <Items>
+                                            <telerik:RadMenuItem runat="server" Text="Cambiar Clave" NavigateUrl="CambioClave.aspx"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="Creacion de Usuarios" NavigateUrl="Usuario.aspx"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="Administración de Usuarios [Regentes]" NavigateUrl="AdmUsuario.aspx?llamada=1"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="Administración de Usuarios [Planes de Manejo]" Visible="false" NavigateUrl="AdmUsuario.aspx?llamada=2"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="Regentes en Proceso" NavigateUrl="RegentesProceso.aspx"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="Regentes Inscritos" NavigateUrl="RegentesTerminado.aspx"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="Activar/Desactivar Regentes" NavigateUrl="ActDesRegente.aspx"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="Nombres Alternos Regionales" NavigateUrl="NomAltRegion.aspx"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="Expedientes Finalizados" NavigateUrl="ExpFinal.aspx?llamada=2"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="Listado de regentes inscritos" NavigateUrl="ListadoReg.aspx"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="Historial datos personales Regentes" NavigateUrl="HisDatPer.aspx"></telerik:RadMenuItem>
+                                            <telerik:RadMenuItem runat="server" Text="Expedientes dados de baja" NavigateUrl="ExpBaja.aspx"></telerik:RadMenuItem>
+                                        </Items>
+                                    </telerik:RadMenuItem>
+                                </Items>
+                            </telerik:RadMenu>
+                        </td>
+                        <td>
+                            <asp:Label runat="server" ID="lblUsuario" ForeColor="Black"></asp:Label>
+                        </td>
+                        <td>
+                            <asp:ImageButton runat="server" ToolTip="Cerrar Sesión" id="ImgCerrarSesion" ImageUrl="~/Imagenes/logoout.ico" />
+                        </td>
+                    </tr>
+                </table>
+              
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+   
+</body>
+</html>
