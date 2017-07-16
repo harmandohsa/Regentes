@@ -256,7 +256,7 @@ namespace Regentes
             {
                 if (this.Util.ObtieneRegistro("Select * from tregente where codregente = " + base.Request.QueryString["CodRegente"], "CodCategoria").ToString() == "1")
                 {
-                    if (ChkSol.Checked == true && ChkCopiaLegal.Checked == true && ChkConstancia.Checked == true && ChkPago.Checked == true)
+                    if (ChkSol.Checked == true && ChkCopiaLegal.Checked == true && ChkPago.Checked == true)
                         return true;
                     else
                         return false;

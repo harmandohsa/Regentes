@@ -641,12 +641,12 @@ namespace Regentes
                     XmlNodeList fecha = nodo.GetElementsByTagName("FechaVencimiento");
                     XmlNodeList nombre = nodo.GetElementsByTagName("Nombres");
                     XmlNodeList apellido = nodo.GetElementsByTagName("Apellidos");
-                    if (nombre[i].InnerText.Trim() != Nombres.Trim())
+                    if (nombre[i].InnerText.Trim().ToUpper() != Nombres.Trim().ToUpper())
                     {
                         Mensaje = "Los nombres no coinciden con ese número de registro";
                         return false;
                     }
-                    if (apellido[i].InnerText.Trim() != Apellidos.Trim())
+                    if (apellido[i].InnerText.Trim().ToUpper() != Apellidos.Trim().ToUpper())
                     {
                         Mensaje = "Los apellidos no coinciden con ese número de registro";
                         return false;

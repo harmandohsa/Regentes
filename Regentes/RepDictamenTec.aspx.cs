@@ -118,9 +118,19 @@ namespace Regentes
                     row["CodReg"] = reader["codreg"];
                     row["FecAutReg"] = DatosRegistro(reader["codreg"].ToString(), 1);
                     row["FecVenReg"] = DatosRegistro(reader["codreg"].ToString(), 2);
-                    row["CodRegEpmf"] = reader["codregempf"];
-                    row["FecAutRegEpmf"] = DatosRegistro(reader["codregempf"].ToString(), 1);
-                    row["FecVenRegEpmf"] = DatosRegistro(reader["codregempf"].ToString(), 2);
+                    if (reader["codregempf"].ToString() == "")
+                    {
+                        row["CodRegEpmf"] = "";
+                        row["FecAutRegEpmf"] = DateTime.Now;
+                        row["FecVenRegEpmf"] =DateTime.Now;
+                    }
+                    else
+                    {
+                        row["CodRegEpmf"] = reader["codregempf"];
+                        row["FecAutRegEpmf"] = DatosRegistro(reader["codregempf"].ToString(), 1);
+                        row["FecVenRegEpmf"] = DatosRegistro(reader["codregempf"].ToString(), 2);
+                    }
+                    
                     row["Recomendacion"] = reader["Recomendacion"].ToString().ToUpper();
                     row["Categoria"] = reader["Categoria"];
                     if (Tramite == "1")
